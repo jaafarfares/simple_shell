@@ -1,0 +1,18 @@
+#include "main.h"
+
+char *_getenv(void)
+{
+	unsigned int i = 0;
+	char *pat = NULL, *_path = "PATH=";
+
+	while (environ[i] != NULL)
+	{
+		if (!_strncmp(environ[i], _path, 5))
+		{
+			pat = environ[i] + 5;
+		}
+		i++;
+	}
+	return (pat);
+}
+
