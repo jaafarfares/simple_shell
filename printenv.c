@@ -4,7 +4,7 @@
  * Return: none
  */
 
-int printenv(char **arg unused)
+int printenv(void)
 {
 	unsigned int i;
 
