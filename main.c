@@ -7,24 +7,26 @@ int main(int ac unused, char **av unused)
 	char *path;
 	char **splitcmd;
 	char **splitpath;
-	int i;
 
 	path = _getenv();
-	splitpath = splitstr(path, ":");
-
-	while(i)
+	if (path == NULL)
+		return (0);
+	splitpath = splitstr(path, ":\n");
+	while(1)
 	{	
 		prompt();
 
 		cmd = read_line();
-		splitcmd = splitstr(cmd, " \t");
-		i = execute(splitcmd, splitpath);
+		splitcmd = splitstr(cmd, " \t\r\n");
+		if (splitcmd == NULL)
+		return(1);	
+		execute(splitcmd, splitpath, cmd);
 
 		free(cmd);
 		free(splitcmd);
-	}
+	
+		}
 
 	free(splitpath);
-
 	return (0);
 }
