@@ -9,7 +9,7 @@ char *_getenv(void)
 	{
 		if (!_strncmp(environ[i], _path, 5))
 		{
-			pat = environ[i] + 5;
+			pat = environ[i] + 7;
 		}
 		i++;
 	}
