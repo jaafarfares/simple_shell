@@ -7,19 +7,21 @@ char *read_line(void)
 {
 	char *string;
 	int input;
-	size_t bufsize = 0;
+	size_t size = 0;
 
-	string = (char *)malloc(sizeof(char) * bufsize);
+	string = malloc(sizeof(char*) * size);
 	if (string == NULL)
 	{
 		perror("Error");
 	}
 
-	input = getline(&string, &bufsize, stdin);
+	input = getline(&string, &size, stdin);
 
 	if (input == -1)
 	{
 		exit(0);
 	}
+
 	return (string);
+	free(string);
 }
