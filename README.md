@@ -109,6 +109,6 @@ File|Description
 ---
 
 ## Authors
-* **Jaafar Fares** - [Jaafar](https://github.com/jaafarfares)
-* **Achref Haddaji** - [Achref](https://github.com/Achref-haddaji)
-* **Louay Chab** - [Louay](https://github.com/louay66)
+* **Jaafar Fares** - [Jaafar-github](https://github.com/jaafarfares)
+* **Achref Haddaji** - [Achref-github](https://github.com/Achref-haddaji)
+* **Louay Chab** - [Louay-github](https://github.com/louay66)
