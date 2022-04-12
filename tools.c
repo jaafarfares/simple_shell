@@ -66,3 +66,48 @@ int _strncmp(char *s1, char *s2, size_t size)
 	else
 		return (0);
 }
+/**
+ * formsh - concatenate two string
+ * @ar1: concatenate
+ * @ar2: concatenate
+ * Return: if equals return 0, -1 if don't
+ */
+
+char *formsh(char *ar1, char *ar2)
+{
+	int a, b, i;
+	char *string;
+
+	a = _strlen(ar1);
+	b = _strlen (ar2);
+
+	string = malloc(sizeof(char) * (a + b + 1));
+	if (string == NULL)
+		return (NULL);
+
+	for (i = 0 ; i < (a + b + 1) ; i++)
+	{
+		if (i < a)
+			string[i] = ar1[i];
+		else if (i == a)
+			string[i] = '/';
+		else
+			string[i] = ar2[i - i - 1];
+	}
+	return (string);
+}
+/**
+ *  *free_array - free an array
+ *   *@str : an array of pointrs
+ *    *Return: void
+ *     */
+void free_array(char **str)
+{
+	int i = 0;
+
+	while (str[i] != NULL)
+	{
+		free(str[i]);
+	}
+	free(str);
+}
