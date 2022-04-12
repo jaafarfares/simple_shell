@@ -11,7 +11,7 @@ char **splitstr(char *input, char *delimiter)
 	char **toks;
 	int count = 0;
 
-	toks = malloc(sizeof(char *) * count);
+	toks = malloc(sizeof(char *) * 30);
 	
 	token = strtok(input, delimiter);
 	while (token != NULL)
@@ -21,7 +21,9 @@ char **splitstr(char *input, char *delimiter)
 		token = strtok(NULL, delimiter);
 		count++;
 	}
-	toks [count] = token;
+	toks[count] = token;
 
+	free(toks);
 	return (toks);
+
 }
