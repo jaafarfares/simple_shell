@@ -9,7 +9,7 @@ char *read_line(void)
 	int input;
 	size_t size = 0;
 
-	string = malloc(sizeof(char*) * size);
+	string = malloc(sizeof(char *) * size);
 	if (string == NULL)
 	{
 		perror("Error");
