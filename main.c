@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * main-simple_shell
+ * @unused: unused argc
+ * @unused: unused argv
+ * Return: Nothing.
+ */
 
 int main(int ac unused, char **av unused)
 {
@@ -12,19 +17,19 @@ int main(int ac unused, char **av unused)
 	if (path == NULL)
 		return (0);
 	splitpath = splitstr(path, ":\n");
-	while(1)
-	{	
+	while (1)
+	{
 		prompt();
 
 		cmd = read_line();
 		splitcmd = splitstr(cmd, " \t\r\n");
 		if (splitcmd == NULL)
-		return(1);	
+		return (1);
 		execute(splitcmd, splitpath, cmd);
 
 		free(cmd);
 		free(splitcmd);
-	
+
 		}
 
 	free(splitpath);
