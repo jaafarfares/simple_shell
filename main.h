@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <sys/wait.h>
 
-
+void exit(char **args);
 extern char **environ;
 int printenv(void);
 int fun_builtin(char **command);
