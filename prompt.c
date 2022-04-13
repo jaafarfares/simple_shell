@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *p_prompt - print the prompt
+ * prompt - print the prompt
  *Return: 0 on succes 1 if failed
  */
 
